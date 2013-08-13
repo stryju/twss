@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{title}</title>
+  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="styles/twss.css">
+
+<body>
+  <main role="main">
+    <h1>TWSS</h1>
+
+    <p>{jsonFull.input}</p>
+    <p>{jsonFull.twss|js|s}</p>
+
+    <form method="post" action="/">
+      <input type="text" name="sentence" required pattern=".{2,}">
+      <button type="submit">check</button>
+    </form>
+  </main>
+  <aside>
+    <h1>Usage</h1>
+
+    <p>To properly use this <b>awesomesauce</b> service, send <var>POST</var>/<var>GET</var> request with your sentence as a <var>sentence</var> parameter
+
+    <p>This service will respond to following <var>Accept</var> headers:
+
+    <ul>
+      <li>text/html
+      <li>text/plain
+      <li>application/json
+    </ul>
+
+    <h2 class="mono">text/html</h2>
+
+    <p>Well, you will see this page :D</p>
+
+    <h2 class="mono">text/plain</h2>
+
+    <p>You will get plain text response with <var>true|false</var></p>
+
+    <h2 class="mono">application/json</h2>
+
+    <p>You will get JSON response with <var>twss</var> variable with value of <var>true|false</var>, like:
+    </p>
+
+    <figure>
+      <pre class="code"><code data-language="json">{json|js|s}</code></pre>
+    </figure>
+
+    <p>You can also include <var>?full</var> parameter to see get the <var>input</var> along with <var>twss</var> value, like:</p>
+
+    <figure>
+      <pre class="code"><code data-language="json">{jsonFull|js|s}</code></pre>
+    </figure>
+  </aside>
