@@ -14,7 +14,8 @@
 
   var sentences = require( path.join( __dirname, 'assets', 'data', 'twss.json' ) );
 
-  console.log( sentences.length );
+  twss.treshold = 0.65;
+  // twss.algo     = 'knn';
 
   var app = express();
   app.engine( 'dust', cons.dust );
