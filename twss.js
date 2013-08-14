@@ -4,11 +4,13 @@
 (function () {
   'use strict';
 
-  var twss    = require( 'twss' );
-  var express = require( 'express' );
-  var dust    = require( 'dustjs-linkedin' );
-  var cons    = require( 'consolidate' );
-  var path    = require( 'path' );
+  var twss      = require( 'twss' );
+  var express   = require( 'express' );
+  var dust      = require( 'dustjs-linkedin' );
+  var cons      = require( 'consolidate' );
+  var path      = require( 'path' );
+  var cors      = require( 'cors' );
+  var validator = require( 'express-validator');
 
   var sentences = require( path.join( __dirname, 'assets', 'data', 'twss.json' ) );
 
@@ -22,16 +24,11 @@
     app.set( 'view engine', 'dust' );
     app.set( 'views', path.join( __dirname,  'assets', 'templates' ) );
 
+    app.use( validator() );
+    app.use( cors() );
     app.use( express.favicon() );
     app.use( express.bodyParser() );
     app.use( express.static( path.join( __dirname, 'public' ) ) );
-
-    // app.use( function ( req, res ) {
-    //   res.header( 'Access-Control-Allow-Origin', '*' );
-    //   res.header( 'Access-Control-Allow-Methods', 'GET, POST, OPTIONS' );
-    //   res.header( 'Access-Control-Allow-Headers', 'Content-Type' );
-    // });
-
     app.use( express.logger( 'dev' ) );
   });
 
@@ -78,8 +75,8 @@
     });
   }
 
-  app.get( '/:sentence', function ( request, response ) {
-    return handleResponse( response, request.param.sentence );
+  app.get( '/:sentence', function ( req, res ) {
+    return handleResponse( res, req.sanitize( 'sentence' ).xss() );
   });
 
   app.get( '/', function ( req, res ) {
@@ -87,7 +84,7 @@
   });
 
   app.post( '/', function ( req, res ) {
-    return handleResponse( res, req.body.sentence );
+    return handleResponse( res, req.sanitize( 'sentence' ).xss() );
   });
 
   var port = process.env.PORT || 5000;

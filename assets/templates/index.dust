@@ -17,7 +17,7 @@
 
     <h2>Give it a try</h2>
 
-    <form method=post action=/ class=give-it-a-try>
+    <form method=post action=/ class=give-it-a-try target=_top>
       <input type=text name=sentence placeholder="enter sentence here and ..." required pattern=.{2,}>
       <button type=submit>... check it</button>
     </form>

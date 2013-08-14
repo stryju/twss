@@ -99,6 +99,18 @@ module.exports = function ( grunt ) {
     }
   });
 
+  grunt.registerTask( 'dev', [
+    'compass:clean',
+    'compass:dev',
+    'jshint:dev'
+  ]);
+
+  grunt.registerTask( 'dist', [
+    'compass:clean',
+    'compass:dist',
+    'jshint:dist'
+  ]);
+
   // grunt [default]
   grunt.registerTask( 'default', [
     'dev',
