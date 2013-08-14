@@ -15,9 +15,16 @@ module.exports = function ( grunt ) {
     compass : {
       options : {
         sassDir   : 'assets/styles',
-        imagesDir : 'assets/images',
         fontsDir  : 'assets/fonts',
-        cssDir    : 'public/styles'
+        cssDir    : 'public/styles',
+
+        imagesDir          : 'assets/images',
+        generatedImagesDir : 'assets/images/sprites',
+
+        httpStylesheetsPath     : '/styles',
+        httpImagesPath          : '/images',
+        httpGeneratedImagesPath : '/images/sprites',
+        httpFontsPath           : '/fonts'
       },
 
       clean : {

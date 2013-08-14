@@ -1,39 +1,292 @@
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\000032}}
-html,
-body {
-  min-height: 100%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\000036}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\000034}}
 html {
-  font-family: 'Source Sans Pro', sans-serif;
-  margin: 0 auto;
-  max-width: 60em;
-  color: #444;
+  background: url('/images/escheresque_ste.png') 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000314}}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000312}}
+  html {
+    background: url('/images/escheresque_ste_@2X.png') 50% 50%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000317}}
+body {
+  color: #444;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 1em auto 3em;
+  max-width: 60em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000327}}
 .mono {
   font-family: 'Source Code Pro', monospace;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000318}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000331}}
 var, .code {
   font-family: 'Source Code Pro', monospace;
-  font-style: normal;
   background: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000326}}
-var {
-  display: inline-block;
-  padding: 3px;
-  font-size: .9em;
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000339}}
+.main,
+.usage {
+  padding: 2em;
+  background: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000343}}
+.main > h1:first-child,
+.usage > h1:first-child {
+  border-bottom: 1px solid #eeeeee;
+  padding: 0;
+  margin: 0 0 1em;
+  padding: 0 0 .5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000351}}
+.give-it-a-try {
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000354}}
+.give-it-a-try input {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #33b5e5;
+  padding: 5px 10px;
+  font-family: inherit;
+  font-size: 24px;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000366}}
+.give-it-a-try input:focus {
+  outline-color: #33b5e5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000371}}
+.give-it-a-try button {
+  border: 0;
+  background: #33b5e5;
+  font-size: 20px;
+  font-family: inherit;
+  padding: 5px 10px;
+  color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000383}}
+var {
+  font-size: .9em;
+  font-style: italic;
+  display: inline-block;
+  padding: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000393}}
 .code {
   padding: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\0000398}}
+.usage {
+  border-top: 2px dashed #cccccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003101}}
+.usage section {
+  padding: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003104}}
+.usage section + section {
+  border-top: 1px solid #eeeeee;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003109}}
+.usage section + section::before {
+  color: #eeeeee;
+  content: '//';
+  letter-spacing: -2px;
+  text-align: center;
+  line-height: 1.35em;
+  background: #fff;
+  border: 1px solid #eeeeee;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003134}}
+.sentence {
+  margin: 1em 5%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003138}}
+.sentence > p {
+  background: #cccccc;
+  font-style: italic;
+  box-shadow: 0 10px #999999;
+  position: relative;
+  border-radius: 10px;
+  padding: 1em;
+  font-size: 32px;
+  margin: 0 0 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003152}}
+.sentence > p::before, .sentence > p::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: 1em;
+  border: solid transparent;
+  border-width: 0 30px 20px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003161}}
+.sentence > p::before {
+  border-right-color: #999999;
+  margin-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003166}}
+.sentence > p::after {
+  border-right-color: #cccccc;
+  border-bottom-width: 30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003171}}
+.sentence > p.is-twss {
+  background: #99cc00;
+  box-shadow: 0 10px #669900;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003175}}
+.sentence > p.is-twss::before {
+  border-right-color: #669900;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003179}}
+.sentence > p.is-twss::after {
+  border-right-color: #99cc00;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003185}}
+.sentence > figcaption {
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003188}}
+.sentence > figcaption .not {
+  color: #cc0000;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003194}}
+.footer {
+  background: #5d5d5d;
+  color: #ccc;
+  margin: 0 .5em;
+  padding: 2em;
+  position: relative;
+  top: -1.5em;
+  box-shadow: 0 25px 30px -20px #000, 0 -20px 20px -25px #000;
+  -webkit-transition: all, 0.35s;
+  -moz-transition: all, 0.35s;
+  -o-transition: all, 0.35s;
+  transition: all, 0.35s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003206}}
+.footer:hover {
+  top: -.75em;
+  box-shadow: 0 30px 30px -20px #000, 0 0 0 -5px #000;
+  margin: 0 .4em;
+  padding: 2em 2.1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003212}}
+.footer:hover::before {
+  border-width: .75em .4em 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003215}}
+.footer:hover::after {
+  border-width: .75em 0 0 .4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003221}}
+.footer::before, .footer::after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  border: solid #771111;
+  border: solid #222222;
+  border-top-color: transparent;
+  -webkit-transition: all, 0.35s;
+  -moz-transition: all, 0.35s;
+  -o-transition: all, 0.35s;
+  transition: all, 0.35s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003233}}
+.footer::before {
+  border-width: 1.5em .5em 0 0;
+  right: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003237}}
+.footer::after {
+  border-width: 1.5em 0 0 .5em;
+  left: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003242}}
+.footer a {
+  color: #33b5e5;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003251}}
+.footer a::before {
+  content: '';
+  height: 1px;
+  top: 100%;
+  left: 50%;
+  width: 0;
+  position: absolute;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
+  background: #0099cc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003264}}
+.footer a:hover::before {
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003273}}
+.credits {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003277}}
+.credits dt, .credits dd {
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003281}}
+.credits dd {
+  margin: 0 0 0 .2em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003285}}
+.credits dd + dt::before {
+  content: '//';
+  color: #999999;
+  letter-spacing: -2px;
+  margin: 0 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/projects\/github\/twss\/assets\/styles\/twss\.scss}line{font-family:\00003296}}
+.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+  font-weight: normal;
 }

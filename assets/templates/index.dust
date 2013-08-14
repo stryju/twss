@@ -1,24 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang=en>
 <head>
-  <meta charset="UTF-8">
+  <meta charset=UTF-8>
   <title>{title}</title>
-  <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="styles/twss.css">
+  <base target=_blank>
+  <link rel=stylesheet type=text/css href=styles/twss.css>
 
 <body>
-  <main role="main">
+  <main role=main class=main>
     <h1>TWSS</h1>
 
-    <p>{jsonFull.input}</p>
-    <p>{jsonFull.twss|js|s}</p>
+    <figure class=sentence>
+      <p class=is-{^jsonFull.twss}not-{/jsonFull.twss}twss>{jsonFull.input}</p>
+      <figcaption title="most likely, that is...">that's {^jsonFull.twss}<b class=not>NOT</b> {/jsonFull.twss}what she said!</figcaption>
+    </figure>
 
-    <form method="post" action="/">
-      <input type="text" name="sentence" required pattern=".{2,}">
-      <button type="submit">check</button>
+    <h2>Give it a try</h2>
+
+    <form method=post action=/ class=give-it-a-try>
+      <input type=text name=sentence placeholder="enter sentence here and ..." required pattern=.{2,}>
+      <button type=submit>... check it</button>
     </form>
   </main>
-  <aside>
+  <aside class=usage>
     <h1>Usage</h1>
 
     <p>To properly use this <b>awesomesauce</b> service, send <var>POST</var>/<var>GET</var> request with your sentence as a <var>sentence</var> parameter
@@ -31,26 +35,46 @@
       <li>application/json
     </ul>
 
-    <h2 class="mono">text/html</h2>
+    <section>
+      <h2 class=mono>text/html</h2>
 
-    <p>Well, you will see this page :D</p>
+      <p>Well, you will see this page :D</p>
+    </section>
 
-    <h2 class="mono">text/plain</h2>
+    <section>
+      <h2 class=mono>text/plain</h2>
 
-    <p>You will get plain text response with <var>true|false</var></p>
+      <p>You will get plain text response with <var>true|false</var></p>
+    </section>
 
-    <h2 class="mono">application/json</h2>
+    <section>
+      <h2 class=mono>application/json</h2>
 
-    <p>You will get JSON response with <var>twss</var> variable with value of <var>true|false</var>, like:
-    </p>
+      <p>You will get JSON response with <var>twss</var> variable with value of <var>true|false</var>, like:
+      </p>
 
-    <figure>
-      <pre class="code"><code data-language="json">{json|js|s}</code></pre>
-    </figure>
+      <figure>
+        <pre class=code><code data-language=json>{json|js|s}</code></pre>
+        <figcaption>sample JSON response</figcaption>
+      </figure>
 
-    <p>You can also include <var>?full</var> parameter to see get the <var>input</var> along with <var>twss</var> value, like:</p>
+      <p>You can also include <var>?full</var> parameter to see get the <var>input</var> along with <var>twss</var> value, like:</p>
 
-    <figure>
-      <pre class="code"><code data-language="json">{jsonFull|js|s}</code></pre>
-    </figure>
+      <figure>
+        <pre class=code><code data-language=json>{jsonFull|js|s}</code></pre>
+      </figure>
+    </section>
   </aside>
+
+  <footer class=footer>
+    <dl class=credits>
+      <dt>created <span class=amp>&amp;</span> maintained by
+      <dd><a href=//stryju.pl>tomasz stryjewski</a>
+
+      <dt>based on
+      <dd><a href=//github.com/DanielRapp/twss.js>twss</a> by <a href=//rappdaniel.com/>Daniel Rapp</a>
+
+      <dt>hosted by
+      <dd><a href=//webport.pl>webport</a>
+    </dl>
+  </footer>

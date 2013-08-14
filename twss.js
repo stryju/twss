@@ -10,6 +10,10 @@
   var cons    = require( 'consolidate' );
   var path    = require( 'path' );
 
+  var sentences = require( path.join( __dirname, 'assets', 'data', 'twss.json' ) );
+
+  console.log( sentences.length );
+
   var app = express();
   app.engine( 'dust', cons.dust );
 
@@ -22,11 +26,11 @@
     app.use( express.bodyParser() );
     app.use( express.static( path.join( __dirname, 'public' ) ) );
 
-    app.use( function ( req, res ) {
-      res.header( 'Access-Control-Allow-Origin', '*' );
-      res.header( 'Access-Control-Allow-Methods', 'GET, POST, OPTIONS' );
-      res.header( 'Access-Control-Allow-Headers', 'Content-Type' );
-    });
+    // app.use( function ( req, res ) {
+    //   res.header( 'Access-Control-Allow-Origin', '*' );
+    //   res.header( 'Access-Control-Allow-Methods', 'GET, POST, OPTIONS' );
+    //   res.header( 'Access-Control-Allow-Headers', 'Content-Type' );
+    // });
 
     app.use( express.logger( 'dev' ) );
   });
@@ -49,7 +53,8 @@
   };
 
   function getRandomTWSS() {
-    return 'it\'s hard!';
+    var randomIndex = ~~ ( Math.random() * sentences.length );
+    return sentences[ randomIndex ] || 'it\'s hard!';
   }
 
   function handleResponse( res, input ) {
@@ -73,22 +78,15 @@
     });
   }
 
-  // app.get( '/:sentence', function ( request, response ) {
-  //   var sentence = request.param.sentence;
-  //   var isTwss   = twss.is( sentence );
-
-  //   return handleResponse( response, sentence, isTwss );
-  // });
+  app.get( '/:sentence', function ( request, response ) {
+    return handleResponse( response, request.param.sentence );
+  });
 
   app.get( '/', function ( req, res ) {
-    console.log( req.body );
-
     return handleResponse( res );
   });
 
   app.post( '/', function ( req, res ) {
-    console.log( req.body );
-
     return handleResponse( res, req.body.sentence );
   });
 
