@@ -2,7 +2,7 @@
 @import "ci";
 
 html {
-  background: image-url( 'escheresque_ste.png' ) 50% 50%;
+  background: $ci-black; image-url( 'escheresque_ste.png' ) 50% 50% fixed;
 }
 
 @media
@@ -93,6 +93,7 @@ var {
 .code {
   @extend %var;
   padding: 1em;
+  overflow: auto;
 }
 
 .usage {

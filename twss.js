@@ -25,12 +25,13 @@
     app.set( 'view engine', 'dust' );
     app.set( 'views', path.join( __dirname,  'assets', 'templates' ) );
 
-    app.use( validator() );
+    app.use( express.logger( 'dev' ) );
+    app.use( express.compress() );
     app.use( cors() );
-    app.use( express.favicon() );
+    app.use( validator() );
+    app.use( express.favicon( path.join( __dirname, 'public', 'favicon.png' )) );
     app.use( express.bodyParser() );
     app.use( express.static( path.join( __dirname, 'public' ) ) );
-    app.use( express.logger( 'dev' ) );
   });
 
   // function template( input, isTwss ) {

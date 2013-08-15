@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang=en>
 <head>
-  <meta charset=UTF-8>
   <title>{title}</title>
-  <base target=_blank>
   <link rel=stylesheet type=text/css href=styles/twss.css>
+  <meta name=viewport content="width=device-width">
+  <base target=_blank>
 
 <body>
   <main role=main class=main>
