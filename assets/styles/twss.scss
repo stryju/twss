@@ -38,7 +38,6 @@ body {
 .main,
 .usage {
   padding: 2em;
-  background: #fff;
 
   > h1:first-child {
     border-bottom: 1px solid $ci-silver;
@@ -46,6 +45,10 @@ body {
     margin: 0 0 1em;
     padding: 0 0 .5em;
   }
+}
+
+.main {
+  background: #fff;
 }
 
 .give-it-a-try {
@@ -98,25 +101,26 @@ var {
 
 .usage {
   border-top: 2px dashed $ci-gray-light;
+  background: $ci-silver;
 
   section {
     padding: 1em;
 
     + section {
-      border-top: 1px solid $ci-silver;
+      border-top: 1px solid $ci-gray-light;
 
       position: relative;
 
       &::before {
         $size: 1.5em;
-        color: $ci-silver;
+        color: $ci-gray-light;
         content: '//';
         letter-spacing: -2px;
         text-align: center;
         line-height: $size * .9;
 
-        background: #fff;
-        border: 1px solid $ci-silver;
+        background: $ci-silver;
+        border: 1px solid $ci-gray-light;
         border-radius: 50%;
 
         position: absolute;
@@ -195,28 +199,28 @@ var {
 .footer {
   background: mix( $ci-gray-dark, $ci-black );
   color: #ccc;
-  margin: 0 .5em;
+  margin: 0 .5em -2em;
   padding: 2em;
   position: relative;
   top: -1.5em;
 
   box-shadow: 0 25px 30px -20px #000, 0 -20px 20px -25px #000;
 
-  @include transition( all, .35s );
+  // @include transition( all, .35s );
 
-  &:hover {
-    top: -.75em;
-    box-shadow: 0 30px 30px -20px #000, 0 0 0 -5px #000;
-    margin: 0 .4em;
-    padding: 2em 2.1em;
+  // &:hover {
+  //   top: -.75em;
+  //   box-shadow: 0 30px 30px -20px #000, 0 0 0 -5px #000;
+  //   margin: 0 .4em;
+  //   padding: 2em 2.1em;
 
-    &::before {
-      border-width: .75em .4em 0 0;
-    }
-    &::after {
-      border-width: .75em 0 0 .4em;
-    }
-  }
+  //   &::before {
+  //     border-width: .75em .4em 0 0;
+  //   }
+  //   &::after {
+  //     border-width: .75em 0 0 .4em;
+  //   }
+  // }
 
   &::before,
   &::after {
@@ -228,7 +232,7 @@ var {
     border: solid $ci-black;
     border-top-color: transparent;
 
-    @include transition( all, .35s );
+    // @include transition( all, .35s );
   }
 
   &::before {
