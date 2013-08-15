@@ -2,7 +2,7 @@
 @import "ci";
 
 html {
-  background: $ci-black; image-url( 'escheresque_ste.png' ) 50% 50% fixed;
+  background: $ci-black image-url( 'escheresque_ste.png' ) 50% 50% fixed;
 }
 
 @media
